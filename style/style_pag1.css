@@ -1,0 +1,29 @@
+
+body {
+    background-image: linear-gradient(rgb(64, 190, 231), rgb(77, 154, 255));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+width: 50em;
+margin: auto;
+background-color: #fff;
+border-radius: 10px;
+}
+
+#duvidas {
+    margin-left: 15px;
+}
+
+#duvidas h1 {
+    padding-top: 15px;
+}
+
+#schemas, #fieldCelular {
+    cursor: pointer;
+}
+
+#schemastxt, #fieldCelulartxt {
+    display: none;
+}

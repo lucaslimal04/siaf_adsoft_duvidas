@@ -1,15 +1,18 @@
 var schemas = document.querySelector('#schemas');
 var schemastxt = document.querySelector('#schemastxt');
+var clicker = true;
 
 schemas.addEventListener('click', abrirSchemas);
 
 function abrirSchemas() {
-    if (schemastxt.style.display == 'none') {
-        schemastxt.style.display = 'block';
+    if (clicker) {
+        schemastxt.innerHTML += "<p>Provavelmente o SIAF está mapeado incorretamente, clique com o botão direito do mouse em cima do ícone do SIAF e selecione abrir local do arquivo, provavelmente o diretório dos arquivos que o SIAFW está, é direcionado pela rede, e precisa ser direcionado pelo servidor. </p>";
     }
     else {
-        schemastxt.style.display = 'none';
+        schemastxt.innerHTML = "";
     }
+
+    clicker = !clicker;
 }
 
 var fieldCelular = document.querySelector('#fieldCelular');

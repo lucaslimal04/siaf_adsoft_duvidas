@@ -32,7 +32,7 @@ fieldCelular.addEventListener('click', abrirFieldCelular);
 
 function abrirFieldCelular() {
     if (clicker) {
-        fieldCelulartxt.innerHTML += "<p>Falta essa coluna no banco de dados, fazer backup, rodar o atualiza.exe e depois os comandos versaoxxx, versao180823190 (o número da versão) e o atualiza programas.</p>";
+        fieldCelulartxt.innerHTML += "<p>Está faltando essa coluna no banco de dados, rodar os comandos versaoxxx, versao180823190 (o número da versão) e o atualiza programas na manutenção de arquivos para criar novamente essa coluna.</p>";
         fieldCelularimg.style.display = 'block'
     }
     else {

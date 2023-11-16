@@ -48,3 +48,8 @@ border-radius: 10px;
 #fieldCelularimg {
     display: none;
 }
+
+footer {
+    margin: 28vw 44vw;
+    opacity: 0.5;
+}

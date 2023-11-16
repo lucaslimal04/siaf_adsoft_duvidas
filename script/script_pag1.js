@@ -6,7 +6,7 @@ schemas.addEventListener('click', abrirSchemas);
 
 function abrirSchemas() {
     if (clicker) {
-        schemastxt.innerHTML += "<p>Provavelmente o SIAF está mapeado incorretamente, clique com o botão direito do mouse em cima do ícone do SIAF e selecione abrir local do arquivo, provavelmente o diretório dos arquivos que o SIAFW está, é direcionado pela rede, e precisa ser direcionado pelo servidor. </p>";
+        schemastxt.innerHTML += "<p>O SIAFW está mapeado incorretamente, clique com o botão direito do mouse no ícone do SIAFW e selecione abrir local do arquivo, o diretório dos arquivos que o SIAFW está, é direcionado pela rede, e precisa ser direcionado pelo servidor, faça o mapeamento do SIAFW de acordo a imagem. </p> <br> <img src="" alt="">";
     }
     else {
         schemastxt.innerHTML = "";

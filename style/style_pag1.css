@@ -13,7 +13,8 @@ border-radius: 10px;
 }
 
 #duvidas {
-    margin-left: 15px;
+    margin: auto;
+    max-width: 40em;
 }
 
 #duvidas h1 {
@@ -24,6 +25,22 @@ border-radius: 10px;
     cursor: pointer;
 }
 
-#schemasimg {
+#localschemas, #schemasimg, #solucaoschemas {
     display: none;
+}
+
+
+#localschemas img{
+    width: 22em;
+    max-height: 20em;
+}
+
+#schemasimg img {
+    width: 30em;
+    margin: 10px;
+}
+
+#solucaoschemas img {
+    width: 25em;
+    max-height: 20em;
 }

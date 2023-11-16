@@ -25,15 +25,20 @@ function abrirSchemas() {
 }
 
 var fieldCelular = document.querySelector('#fieldCelular');
-var fieldCelulartxt = document.querySelector('#fieldCelulartxt')
-
+var fieldCelulartxt = document.querySelector('#fieldCelulartxt');
+var fieldCelularimg = document.querySelector('#fieldCelularimg');
+var clicker = true;
 fieldCelular.addEventListener('click', abrirFieldCelular);
 
 function abrirFieldCelular() {
-    if (fieldCelulartxt.style.display == 'none') {
-        fieldCelulartxt.style.display = 'block';
+    if (clicker) {
+        fieldCelulartxt.innerHTML += "<p>Falta essa coluna no banco de dados, fazer backup, rodar o atualiza.exe e depois os comandos versaoxxx, versao180823190 (o número da versão) e o atualiza programas.</p>";
+        fieldCelularimg.style.display = 'block'
     }
     else {
-        fieldCelulartxt.style.display ='none';
+        fieldCelulartxt.innerHTML = "";
+        fieldCelularimg.style.display = 'none';
     }
+
+    clicker = !clicker;
 }

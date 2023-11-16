@@ -45,3 +45,6 @@ border-radius: 10px;
     max-height: 20em;
 }
 
+#fieldCelularimg {
+    display: none;
+}

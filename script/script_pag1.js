@@ -27,7 +27,7 @@ function abrirSchemas() {
 var fieldCelular = document.querySelector('#fieldCelular');
 var fieldCelulartxt = document.querySelector('#fieldCelulartxt');
 var fieldCelularimg = document.querySelector('#fieldCelularimg');
-var clicker = true;
+
 fieldCelular.addEventListener('click', abrirFieldCelular);
 
 function abrirFieldCelular() {
@@ -41,4 +41,26 @@ function abrirFieldCelular() {
     }
 
     clicker = !clicker;
+}
+var erroDiButton = document.querySelector('#errodibutton');
+var erroditxt = document.querySelector('#erroditxt');
+var errodiimg = document.querySelector('#errodiimg');
+var erroditxtpos = document.querySelector('#erroditxtpos');
+erroDiButton.addEventListener('click', abrirErroDi);
+
+function abrirErroDi() {
+    if(clicker){
+        errodiimg.style.display = 'block';
+        erroditxt.innerHTML += "<p>Esse erro ocorre devido à Substituição Tributária (ST) referente ao produto. A ST do produto vai estar configurada como 100, o que indica que o produto foi adquirido diretamente por importação. Nesse caso, o sistema exige que informações de importação sejam fornecidas.</p>";
+        erroditxtpos.innerHTML += "<p>No entanto, se o cliente não adquiriu o produto diretamente por importação, é aconselhável utilizar a ST 200 ou 000. Recomenda-se confirmar essa classificação com a contabilidade para garantir a conformidade com a legislação tributária.</p>"
+        
+    }
+    else {
+        errodiimg.style.display = 'none';
+        erroditxt.innerHTML = "";
+        erroditxtpos.innerHTML = "";
+    }
+     
+    clicker = !clicker;
+     
 }

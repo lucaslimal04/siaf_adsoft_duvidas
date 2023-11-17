@@ -21,7 +21,7 @@ border-radius: 10px;
     padding-top: 15px;
 }
 
-#schemas, #fieldCelular {
+#schemas, #fieldCelular, #errodibutton {
     cursor: pointer;
 }
 
@@ -45,9 +45,14 @@ border-radius: 10px;
     max-height: 20em;
 }
 
-#fieldCelularimg {
+#fieldCelularimg, #errodiimg {
     display: none;
 }
+
+#errodiimg img {
+    width: 50vw;
+}
+
 
 footer {
     margin: 28vw 44vw;

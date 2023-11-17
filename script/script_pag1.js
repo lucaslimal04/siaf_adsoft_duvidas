@@ -28,6 +28,7 @@ var fieldCelular = document.querySelector('#fieldCelular');
 var fieldCelulartxt = document.querySelector('#fieldCelulartxt');
 var fieldCelularimg = document.querySelector('#fieldCelularimg');
 var clickerField = true;
+
 fieldCelular.addEventListener('click', abrirFieldCelular);
 
 function abrirFieldCelular() {

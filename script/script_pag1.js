@@ -21,7 +21,7 @@ function abrirSchemas() {
         solucaoschemas.style.display = 'none';
     }
 
-    clicker = !clicker;
+    clickerSchemas = !clickerSchemas;
 }
 
 var fieldCelular = document.querySelector('#fieldCelular');
@@ -40,7 +40,7 @@ function abrirFieldCelular() {
         fieldCelularimg.style.display = 'none';
     }
 
-    clickerfield = !clickerfield;
+    clickerField = !clickerField;
 }
 var erroDiButton = document.querySelector('#errodibutton');
 var erroditxt = document.querySelector('#erroditxt');
@@ -63,6 +63,6 @@ function abrirErroDi() {
         erroditxtpos.innerHTML = "";
     }
      
-    clicker = !clicker;
+    clickerDi = !clickerDi;
      
 }

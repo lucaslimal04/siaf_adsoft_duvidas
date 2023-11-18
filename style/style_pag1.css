@@ -38,10 +38,9 @@ main {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.644);
     transform-origin: center;
-    
 }
 
 #redes_sociais img:hover {
@@ -53,24 +52,10 @@ main {
 
 #novaImagem {
     display: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
-#novaImagem:hover {
-    display: inline-block;
-    transform: scale(1.2) translate(2px, 4px);
-}
-
-#novaImagem:not(hover) {
-    transform: scale(1) translate(0, 0); /* Define a transformação de volta para a forma original */
-}
-
-#imagemOriginal:hover {
-    transform: scale(0.8); /* Ajuste o valor conforme necessário */
-}
-
-#imagemOriginal:not(hover) {
-    transform: scale(1); /* Define a transformação de volta para a forma original */
-}
 
 #duvidas {
     margin: auto;

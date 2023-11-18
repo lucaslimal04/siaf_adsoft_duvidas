@@ -8,15 +8,23 @@ novaImagem.addEventListener('mouseout', trocaEmail);
 function trocaEmail() {
     if (trocandoImagem) {
         imagemOriginal.style.display = 'none';
-        novaImagem.style.display = 'inline-block';
+        novaImagem.style.display = 'block';
+        setTimeout(function () {
+            novaImagem.style.opacity = '0.9';
+        }, 10);
     } else {
         trocandoImagem = false;
-        novaImagem.style.display = 'none';
-        imagemOriginal.style.display = 'inline-block';
+        novaImagem.style.opacity = '0';
+        setTimeout(function () {
+            novaImagem.style.display = 'none';
+            imagemOriginal.style.display = 'inline-block';
+            imagemOriginal.style.opacity = '1';
+        }, 200);
     }
 
     trocandoImagem = !trocandoImagem;
 }
+
 
 
 var schemas = document.querySelector('#schemas');

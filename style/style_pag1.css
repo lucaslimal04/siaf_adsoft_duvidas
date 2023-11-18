@@ -1,6 +1,6 @@
 
 body {
-    background-image: linear-gradient(rgb(64, 190, 231), rgb(77, 154, 255));
+    background-image: linear-gradient(rgb(60, 172, 209), rgb(77, 154, 255));
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -10,6 +10,7 @@ main {
     margin: auto;
     background-color: #fff;
     border-radius: 10px;
+    padding: 10px;
 }
 
 #logo {
@@ -31,14 +32,15 @@ main {
 #redes_sociais img {
     width: 40px;
     border-radius: 50%;
-    transition: width 0.1s;
-       
+    transition: width 0.2s;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.644);
 }
 
 #redes_sociais img:hover {
     transform: translate(1px, 1px);
-    opacity: 0.7;
+    opacity: 0.8;
     width: 45px;
+    border: 1.5px solid rgba(0, 0, 0, 0.171);
 }
 
 
@@ -86,6 +88,6 @@ main {
 
 
 footer {
-    margin: 28vw 40.5vw;
+    margin: 24vw 40.5vw;
     opacity: 0.5;
 }

@@ -1,3 +1,24 @@
+var imagemOriginal = document.querySelector('#imagemOriginal');
+var novaImagem = document.querySelector('#novaImagem');
+var trocandoImagem = true;
+
+imagemOriginal.addEventListener('mouseover', trocaEmail);
+novaImagem.addEventListener('mouseout', trocaEmail);
+
+function trocaEmail() {
+    if (trocandoImagem) {
+        imagemOriginal.style.display = 'none';
+        novaImagem.style.display = 'inline-block';
+    } else {
+        trocandoImagem = false;
+        novaImagem.style.display = 'none';
+        imagemOriginal.style.display = 'inline-block';
+    }
+
+    trocandoImagem = !trocandoImagem;
+}
+
+
 var schemas = document.querySelector('#schemas');
 var schemastxt = document.querySelector('#schemastxt');
 var clickerSchemas = true;

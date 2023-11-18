@@ -1,6 +1,11 @@
 
+@font-face {
+    font-family: 'Quicksand';
+    src: url(../fonts/Quicksand-BoldItalic.otf) format('woff2');
+}
+
 body {
-    background-image: linear-gradient(rgb(60, 172, 209), rgb(77, 154, 255));
+    background-image: linear-gradient(#5498EB,#755AE8, #5A6DE8);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -32,15 +37,17 @@ main {
 #redes_sociais img {
     width: 40px;
     border-radius: 50%;
-    transition: width 0.2s;
+    transition: transform 0.3s ease;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.644);
+    transform-origin: center;
+    
 }
 
 #redes_sociais img:hover {
-    transform: translate(1px, 1px);
     opacity: 0.8;
-    width: 45px;
+    transform: scale(1.2) translate(2px, 4px);
     border: 1.5px solid rgba(0, 0, 0, 0.171);
+    margin-right: -2px;
 }
 
 #duvidas {
@@ -50,6 +57,24 @@ main {
 
 #duvidas h1 {
     padding-top: 15px;
+}
+
+#schemas, #fieldCelular, #errodibutton,#cfopexbutton {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 250px;
+    height: 70px;
+    transition: width 0.4s ease, heigth 0.4s ease;
+    transition: transform 0.4s;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.342);
+}
+
+#schemas:hover, #fieldCelular:hover, #errodibutton:hover,#cfopexbutton:hover {
+    opacity: 0.7;  
+    transform: scale(1.2);
 }
 
 #schemas, #fieldCelular, #errodibutton, #cfopexbutton {
@@ -90,6 +115,19 @@ main {
 }
 
 footer {
-    margin: 24vw 40.5vw;
+    margin: 12vh 40.5vw;
     opacity: 0.5;
+    color: #fff;
+}
+
+footer a {
+    text-decoration: none;
+    color: #e9e9e9;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+    margin-right: -3px;
 }

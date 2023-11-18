@@ -55,7 +55,7 @@ function abrirErroDi() {
     if(clickerDi){
         errodiimg.style.display = 'block';
         erroditxt.innerHTML += "<p>Esse erro ocorre devido à Substituição Tributária (ST) referente ao produto. A ST do produto vai estar configurada como 100, o que indica que o produto foi adquirido diretamente por importação. Nesse caso, o sistema exige que informações de importação sejam fornecidas.</p>";
-        erroditxtpos.innerHTML += "<p>No entanto, se o cliente não adquiriu o produto diretamente por importação, é aconselhável utilizar a ST 200 ou 000. Recomenda-se confirmar essa classificação com a contabilidade para garantir a conformidade com a legislação tributária.</p>"
+        erroditxtpos.innerHTML += "<p>No entanto, se o cliente não adquiriu o produto diretamente por importação, é aconselhável utilizar a ST 200 ou 000. Recomenda-se confirmar essa classificação com a contabilidade para garantir a conformidade com a legislação tributária.</p>";
         
     }
     else {
@@ -66,4 +66,32 @@ function abrirErroDi() {
      
     clickerDi = !clickerDi;
      
+}
+
+var cfopexbutton = document.querySelector('#cfopexbutton');
+var cfopex = document.querySelector('#cfopex');
+var clickercfopex;
+var cfopeximg = document.querySelector('#cfopeximg');
+var cfopexpos = document.querySelector("#cfopexpos");
+var cfopexpos2 = document.querySelector('#cfopexpos2');
+var clickercfopex = true;
+
+cfopexbutton.addEventListener('click', abrircfopex);
+
+function abrircfopex() {
+    if(clickercfopex) {
+        cfopeximg.style.display = 'block';
+        cfopex.innerHTML += "<p>Primeiramente, deve ser verificado o CFOP que está sendo utilizado.</p>";
+        cfopexpos.innerHTML += "<p>Caso o cadastro do cliente seja de outro estado, o CFOP utilizado seria com número inicial 6, o cadastro do cliente deve estar cadastrado como Outros.</p>";
+        cfopexpos2.innerHTML += "<p>Porém se o cliente for do mesmo estado que sua empresa, o CFOP utilizado seria com início 5, o cadastro do cliente deve estar cadastrado como presencial.</p>";
+        
+    }
+    else {
+        cfopeximg.style.display = 'none';
+        cfopex.innerHTML = "";
+        cfopexpos.innerHTML = "";
+        cfopexpos2.innerHTML = "";
+    }
+
+    clickercfopex = !clickercfopex;
 }

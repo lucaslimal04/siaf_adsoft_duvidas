@@ -43,8 +43,6 @@ main {
     border: 1.5px solid rgba(0, 0, 0, 0.171);
 }
 
-
-
 #duvidas {
     margin: auto;
     max-width: 40em;
@@ -54,14 +52,13 @@ main {
     padding-top: 15px;
 }
 
-#schemas, #fieldCelular, #errodibutton {
+#schemas, #fieldCelular, #errodibutton, #cfopexbutton {
     cursor: pointer;
 }
 
-#localschemas, #schemasimg, #solucaoschemas {
+#localschemas, #schemasimg, #solucaoschemas, #cfopeximg {
     display: none;
 }
-
 
 #localschemas img{
     width: 22em;
@@ -73,7 +70,7 @@ main {
     margin: 10px;
 }
 
-#solucaoschemas img {
+#solucaoschemas img  {
     width: 25em;
     max-height: 20em;
 }
@@ -84,8 +81,13 @@ main {
 
 #errodiimg img {
     width: 50vw;
+    max-height: 20em;
 }
 
+#cfopeximg img {
+    width: 45vw;
+    max-height: 20em;
+}
 
 footer {
     margin: 24vw 40.5vw;

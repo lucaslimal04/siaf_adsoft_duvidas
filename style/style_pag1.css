@@ -1,25 +1,95 @@
 
 body {
-    background-image: linear-gradient(rgb(64, 190, 231), rgb(77, 154, 255));
+    background-image: linear-gradient(rgb(60, 172, 209), rgb(77, 154, 255));
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 main {
-width: 50em;
-margin: auto;
-background-color: #fff;
-border-radius: 10px;
+    width: 50em;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#logo {
+    display: flex;
+    
+}
+
+#logo_adsoft:hover {
+    opacity: 0.7;
+}
+
+#redes_sociais {
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+    margin-left: 65%;
+}
+
+#redes_sociais img {
+    width: 40px;
+    border-radius: 50%;
+    transition: width 0.2s;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.644);
+}
+
+#redes_sociais img:hover {
+    transform: translate(1px, 1px);
+    opacity: 0.8;
+    width: 45px;
+    border: 1.5px solid rgba(0, 0, 0, 0.171);
 }
 
 #duvidas {
-    margin-left: 15px;
+    margin: auto;
+    max-width: 40em;
 }
 
 #duvidas h1 {
     padding-top: 15px;
 }
 
-#schemas, #fieldCelular {
+#schemas, #fieldCelular, #errodibutton, #cfopexbutton {
     cursor: pointer;
+}
+
+#localschemas, #schemasimg, #solucaoschemas, #cfopeximg {
+    display: none;
+}
+
+#localschemas img{
+    width: 22em;
+    max-height: 20em;
+}
+
+#schemasimg img {
+    width: 30em;
+    margin: 10px;
+}
+
+#solucaoschemas img  {
+    width: 25em;
+    max-height: 20em;
+}
+
+#fieldCelularimg, #errodiimg {
+    display: none;
+}
+
+#errodiimg img {
+    width: 50vw;
+    max-height: 20em;
+}
+
+#cfopeximg img {
+    width: 45vw;
+    max-height: 20em;
+}
+
+footer {
+    margin: 24vw 40.5vw;
+    opacity: 0.5;
 }

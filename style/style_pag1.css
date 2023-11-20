@@ -56,7 +56,6 @@ main {
     transition: opacity 0.2s ease;
 }
 
-
 #duvidas {
     margin: auto;
     max-width: 40em;
@@ -66,7 +65,7 @@ main {
     padding-top: 15px;
 }
 
-#schemas, #fieldCelular, #errodibutton,#cfopexbutton, #csosnButton {
+#schemas, #fieldCelular, #errodibutton, #cfopexbutton, #csosnButton {
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
     background-color: transparent;
@@ -125,6 +124,7 @@ footer {
     margin: 1vh 40.5vw;
     opacity: 0.5;
     color: #fff;
+    white-space: nowrap;
 }
 
 footer a {

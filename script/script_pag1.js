@@ -124,3 +124,67 @@ function abrircfopex() {
 
     clickercfopex = !clickercfopex;
 }
+
+var csosnButton = document.querySelector('#csosnButton');
+var csosnImg = document.querySelector('#csosnImg');
+var csosnIn = document.querySelector('#csosnIn');
+var csosnNumerado = document.querySelector('#csosnNumerado');
+var csosnTabela = document.querySelector('#csosnTabela');
+var csosnObs = document.querySelector('#csosnObs');
+var csoStTabela = document.querySelector('#csoStTabela');
+var clickercsosn = true;
+
+csosnButton.addEventListener('click', abrirCsosn);
+
+function abrirCsosn() {
+    if (clickercsosn) {
+        csosnImg.style.display = 'block';
+        csosnIn.innerHTML += `<ul>
+            <li>102 - Tributada pelo Simples Nacional sem permissão de crédito;</li>
+            <li>103 - Isenção do ICMS no Simples Nacional para faixa de receita bruta;</li>
+            <li>300 - Imune;</li>
+            <li>400 - Não tributada pelo Simples Nacional;</li>
+            <li>500 - ICMS cobrado anteriormente por substituição tributária (substituído) ou por antecipação;</li>
+            <li>900 - Outros (a critério da UF);</li>
+        </ul>`;
+        csosnNumerado.innerHTML += '<p>Deve ser verificado se o cliente é simples nacional. Caso seja, ele pode utilizar os seguintes CSO:</p>';
+        csosnObs.innerHTML += '<p>OBS: NFC não é permitido CSO 900</p>';
+        csoStTabela.innerHTML += `<table>
+        <tr>
+            <th>CSOSN</th>
+            <th>ST</th>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>000, 020, 090</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>040, 090</td>
+        </tr>
+        <tr>
+            <td>300</td>
+            <td>040, 041</td>
+        </tr>
+        <tr>
+            <td>400</td>
+            <td>040, 050</td>
+        </tr>
+        <tr>
+            <td>500</td>
+            <td>060</td>
+        </tr>
+        <tr>
+            <td>900</td>
+            <td>000, 020, 051, 090</td>
+        </tr>
+    </table>`
+    } else {
+        csosnImg.style.display = 'none';
+        csosnIn.innerHTML = "";
+        csosnNumerado.innerHTML = "";
+        csosnObs.innerHTML = "";
+        csoStTabela.innerHTML = "";
+    }
+    clickercsosn = !clickercsosn;
+}

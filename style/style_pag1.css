@@ -66,7 +66,7 @@ main {
     padding-top: 15px;
 }
 
-#schemas, #fieldCelular, #errodibutton,#cfopexbutton {
+#schemas, #fieldCelular, #errodibutton,#cfopexbutton, #csosnButton {
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
     background-color: transparent;
@@ -79,12 +79,12 @@ main {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.342);
 }
 
-#schemas:hover, #fieldCelular:hover, #errodibutton:hover,#cfopexbutton:hover {
+#schemas:hover, #fieldCelular:hover, #errodibutton:hover,#cfopexbutton:hover, #csosnButton:hover {
     opacity: 0.7;  
     transform: scale(1.2);
 }
 
-#schemas, #fieldCelular, #errodibutton, #cfopexbutton {
+#schemas, #fieldCelular, #errodibutton, #cfopexbutton, #csosnButton {
     cursor: pointer;
 }
 
@@ -107,7 +107,7 @@ main {
     max-height: 20em;
 }
 
-#fieldCelularimg, #errodiimg {
+#fieldCelularimg, #errodiimg, #csosnImg {
     display: none;
 }
 
@@ -116,13 +116,13 @@ main {
     max-height: 20em;
 }
 
-#cfopeximg img {
+#cfopeximg img, #csosnImg img {
     width: 45vw;
     max-height: 20em;
 }
 
 footer {
-    margin: 12vh 40.5vw;
+    margin: 1vh 40.5vw;
     opacity: 0.5;
     color: #fff;
 }
@@ -137,4 +137,19 @@ footer a:hover {
     color: black;
     font-weight: bold;
     margin-right: -3px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 500px;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
 }

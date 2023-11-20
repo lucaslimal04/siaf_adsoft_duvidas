@@ -5,6 +5,7 @@
 }
 
 body {
+    background-color: black;
     margin: 0px;
     padding: 0px;
     height: 100vh;
@@ -18,14 +19,14 @@ body {
 main {
     width: 50em;
     margin: auto;
-    background-color: #fff;
+    background-color: #ffffffd0;
     border-radius: 10px;
     padding: 10px;
+    background-color: #ffffff5d;
 }
 
 #logo {
-    display: flex;
-    
+    display: flex;  
 }
 
 #logo_adsoft:hover {
@@ -81,6 +82,8 @@ main {
     transition: width 0.4s ease, heigth 0.4s ease;
     transition: transform 0.4s;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.342);
+    background-color: #fff;
+    
 }
 
 #schemas:hover, #fieldCelular:hover, #errodibutton:hover,#cfopexbutton:hover, #csosnButton:hover {
@@ -90,6 +93,7 @@ main {
 
 #schemas, #fieldCelular, #errodibutton, #cfopexbutton, #csosnButton {
     cursor: pointer;
+    
 }
 
 #localschemas, #schemasimg, #solucaoschemas, #cfopeximg {

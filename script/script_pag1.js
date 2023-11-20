@@ -1,3 +1,32 @@
+var imagemOriginal = document.querySelector('#imagemOriginal');
+var novaImagem = document.querySelector('#novaImagem');
+var trocandoImagem = true;
+
+imagemOriginal.addEventListener('mouseover', trocaEmail);
+novaImagem.addEventListener('mouseout', trocaEmail);
+
+function trocaEmail() {
+    if (trocandoImagem) {
+        imagemOriginal.style.display = 'none';
+        novaImagem.style.display = 'block';
+        setTimeout(function () {
+            novaImagem.style.opacity = '0.9';
+        }, 10);
+    } else {
+        trocandoImagem = false;
+        novaImagem.style.opacity = '0';
+        setTimeout(function () {
+            novaImagem.style.display = 'none';
+            imagemOriginal.style.display = 'inline-block';
+            imagemOriginal.style.opacity = '1';
+        }, 200);
+    }
+
+    trocandoImagem = !trocandoImagem;
+}
+
+
+
 var schemas = document.querySelector('#schemas');
 var schemastxt = document.querySelector('#schemastxt');
 var clickerSchemas = true;

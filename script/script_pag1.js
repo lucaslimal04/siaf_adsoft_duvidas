@@ -199,3 +199,28 @@ function abrirCsosn() {
     }
     clickercsosn = !clickercsosn;
 }
+
+var totalButton = document.querySelector('#totalButton');
+var totalImg = document.querySelector('#totalImg');
+var totalTxt = document.querySelector('#totalTxt');
+var clickerTotal = true;
+
+totalButton.addEventListener('click', abrirTotal);
+
+function abrirTotal() {
+    if (clickerTotal) {
+        main.style.background = '#ffffffd0';
+        totalImg.style.display = 'block';
+        totalTxt.innerHTML += `<p>Esse problema ocorre devido a um erro de arredondamento no SIAF. 
+        Primeiro, verifique o XML da nota e preste atenção nas tags &lt;vPag&gt; e &lt;vNF&gt;. 
+        Geralmente, o valor em &lt;vPag&gt; estará 0,01 a menos do que em &lt;vNF&gt;. <br>
+        Se isso for confirmado, vá para a nota e adicione 0,01 no campo de acréscimo ou na DSIAF036, procure o campo SAI_ACRE e coloque o valor de 0,01.
+         Após esse procedimento, a nota provavelmente poderá ser emitida.</p>
+        `;
+    } else {
+        main.style.background = '#ffffff5d';
+        totalImg.style.display = 'none';
+        totalTxt.innerHTML = "";
+    }
+    clickerTotal = !clickerTotal;
+}

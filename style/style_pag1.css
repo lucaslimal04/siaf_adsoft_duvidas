@@ -17,6 +17,7 @@ body {
 }
 
 main {
+    line-height: 25px;
     width: 50em;
     margin: auto;
     background-color: #ffffffd0;
@@ -71,7 +72,7 @@ main {
     padding-top: 15px;
 }
 
-#schemas, #fieldCelular, #errodibutton, #cfopexbutton, #csosnButton {
+#schemas, #fieldCelular, #errodibutton, #cfopexbutton, #csosnButton, #totalButton {
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
     background-color: transparent;
@@ -86,17 +87,17 @@ main {
     
 }
 
-#schemas:hover, #fieldCelular:hover, #errodibutton:hover,#cfopexbutton:hover, #csosnButton:hover {
+#schemas:hover, #fieldCelular:hover, #errodibutton:hover,#cfopexbutton:hover, #csosnButton:hover, #totalButton:hover {
     opacity: 0.7;  
     transform: scale(1.2);
 }
 
-#schemas, #fieldCelular, #errodibutton, #cfopexbutton, #csosnButton {
+#schemas, #fieldCelular, #errodibutton, #cfopexbutton, #csosnButton, #totalButton {
     cursor: pointer;
     
 }
 
-#localschemas, #schemasimg, #solucaoschemas, #cfopeximg {
+#localschemas, #solucaoschemas, #fieldCelularimg, #errodiimg, #cfopeximg, #csosnImg,  #totalImg {
     display: none;
 }
 
@@ -115,18 +116,18 @@ main {
     max-height: 20em;
 }
 
-#fieldCelularimg, #errodiimg, #csosnImg {
-    display: none;
-}
-
 #errodiimg img {
     width: 50vw;
     max-height: 20em;
 }
 
-#cfopeximg img, #csosnImg img {
+#cfopeximg img, #csosnImg img, #totalImg img {
     width: 45vw;
     max-height: 20em;
+}
+
+#totalImg img {
+    margin-top: 20px;
 }
 
 footer {
@@ -161,4 +162,14 @@ th, td {
 
 th {
     background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #d8d8d8; 
+}
+tr:nth-child(odd) {
+    background-color: rgba(184, 184, 184, 0.767); 
+}
+#csoStTabela {
+    margin-bottom: 20px;
 }

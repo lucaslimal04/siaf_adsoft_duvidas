@@ -222,5 +222,32 @@ function abrirTotal() {
         totalImg.style.display = 'none';
         totalTxt.innerHTML = "";
     }
+    
     clickerTotal = !clickerTotal;
+}
+
+var vDescButton = document.querySelector('#vDescButton');
+var vDescImg = document.querySelector('#vDescImg');
+var vDesc = document.querySelector('#vDesc');
+var clickerVDesc = true;
+
+vDescButton.addEventListener('click', abrirVDesc);
+
+function abrirVDesc() {
+    if (clickerVDesc) {
+        main.style.background = '#ffffffd0';
+        vDescImg.style.display = 'block';
+        vDesc.innerHTML += `<p>De acordo com as informações do sistema, há uma divergência de valores na Nota Fiscal de Saída em relação ao XML. Para corrigir isso, temos duas opções:<br>
+        Opção 1: Remover o desconto do rodapé e aplicá-lo diretamente no produto. <br>
+        Observação: É importante informar ao cliente caso opte por este método, pois o valor do produto na NF saída será alterado.<br>
+        Opção 2: Nesse método, iremos dobrar o desconto e adicionar um acréscimo no rodapé da nota. <br>
+        Por exemplo, se a nota tem um desconto de 0,50 no rodapé, adicionaremos um acréscimo de 0,50 no rodapé e alteraremos o desconto para 1,00. <br>
+        Dessa forma, o valor total da nota permanecerá o mesmo, apenas o valor do desconto será ajustado.
+        </p>`;
+    } else {
+        main.style.background = '#ffffff5d';
+        vDescImg.style.display = 'none';
+        vDesc.innerHTML = "";
+    }
+    clickerVDesc = !clickerVDesc;
 }

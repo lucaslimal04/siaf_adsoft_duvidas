@@ -263,7 +263,7 @@ function abrirTroco() {
     if(clickerTroco) {
         main.style.background = '#ffffffd0';
         erroTrocoImg.style.display = 'block';
-        erroTrocoTxt.innerHTML += `<p><li>Esse erro ocorre devido a uma falha ao processar os valores totais da nota com o XML corretamente, Para corrigir isso, temos duas opções:</li></p> 
+        erroTrocoTxt.innerHTML += `<p><li>Esse erro ocorre devido a uma falha ao processar os valores totais da nota com o XML corretamente, Para corrigir isso, temos algumas opções:</li></p> 
         <p><li>Verifique se no rodapé da nota está com desconto ou acréscimo, se existir, retire esse valor do rodapé da nota e insira ele diretamente no valor de algum produto de forma que não altere o valor total da nota.</li></p>
         <p><li>Se o anterior não funcionar verifique o XML dessa mesma nota, se existir o valor a mais no campo &lt;vPag&gt;do que o &lt;vNf&gt; verifique se as prestações dessa nota existem número de protocolo(abrindo a nota fiscal de saída e abrindo as prestações), se possuir o campo de &lt;vPag&gt; está correto, então atualize a nota de forma que os dois campos estejam iguais.</li></p> 
         <p><li>Verifique se o tipo de venda dessa nota tem a opção Forma de Pagamento para DF-e, se existir verifique se o campo está correto, se o pagamento for A vista coloque como DINHEIRO, se for A Prazo coloque como CARTÃO DE CRÉDITO.</li></p>

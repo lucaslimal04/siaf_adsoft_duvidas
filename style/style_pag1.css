@@ -125,7 +125,7 @@ main {
     max-height: 20em;
 }
 
-#totalImg img, #vDescImg {
+#totalImg img, #vDescImg, #erroTrocoImg {
     margin-top: 20px;
 }
 

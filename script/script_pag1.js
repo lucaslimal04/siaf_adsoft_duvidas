@@ -27,9 +27,10 @@ function trocaEmail() {
 
 
 
+
 var schemas = document.querySelector('#schemas');
 var schemastxt = document.querySelector('#schemastxt');
-var clickerSchemas = true;
+var clickerSchemas = false; // Inicializa como false para nenhum botão estar aberto
 var localschemas = document.querySelector('#localschemas');
 var schemastxtpos = document.querySelector('#schemastxtpos');
 var solucaoschemas = document.querySelector('#solucaoschemas');
@@ -38,45 +39,81 @@ var main = document.querySelector('main');
 schemas.addEventListener('click', abrirSchemas);
 
 function abrirSchemas() {
+    // Verifica se há algum botão aberto
+    if (clickerField) {
+        // Fecha o botão aberto anteriormente
+        fecharFieldCelular();
+    }
+
+    // Alterna o estado do botão atual
+    clickerSchemas = !clickerSchemas;
+
     if (clickerSchemas) {
         main.style.background = '#ffffffd0';
         schemastxt.innerHTML += "<p>O SIAFW está mapeado incorretamente, clique com o botão direito do mouse no ícone do SIAFW e selecione abrir local do arquivo, o diretório dos arquivos que o SIAFW está, é direcionado pela rede conforme mostram as imagens.</p>";
         localschemas.style.display = 'block';
         schemastxtpos.innerHTML += "<p>O Sistema precisa ser direcionado pelo servidor, faça o mapeamento do SIAFW de acordo com a imagem e abra o SIAFW por esse mapeamento que conseguirá emitir notas normalmente.</p>";
-        solucaoschemas.style.display = 'block';
-    }
-    else {
+        solucaoschemas.style.display = 'block';  
+        solucaoschemas.style.margin = '0px 40px';
+    } else {
         main.style.background = '#ffffff5d';
         schemastxt.innerHTML = "";
         localschemas.style.display = 'none';
         schemastxtpos.innerHTML = "";
         solucaoschemas.style.display = 'none';
     }
-
-    clickerSchemas = !clickerSchemas;
 }
 
 var fieldCelular = document.querySelector('#fieldCelular');
 var fieldCelulartxt = document.querySelector('#fieldCelulartxt');
 var fieldCelularimg = document.querySelector('#fieldCelularimg');
-var clickerField = true;
+var clickerField = false; // Inicializa como false para nenhum botão estar aberto
 
 fieldCelular.addEventListener('click', abrirFieldCelular);
 
 function abrirFieldCelular() {
+    // Verifica se há algum botão aberto
+    if (clickerSchemas) {
+        // Fecha o botão aberto anteriormente
+        fecharSchemas();
+    }
+
+    // Alterna o estado do botão atual
+    clickerField = !clickerField;
+
     if (clickerField) {
         main.style.background = '#ffffffd0';
         fieldCelulartxt.innerHTML += "<p>Está faltando essa coluna no banco de dados, rodar os comandos versaoxxx, versao180823190 (o número da versão) e o atualiza programas na manutenção de arquivos para criar novamente essa coluna.</p>";
-        fieldCelularimg.style.display = 'block'
-    }
-    else {
+        fieldCelularimg.style.display = 'block';
+        fieldCelularimg.style.margin = '0px 70px';
+    } else {
         main.style.background = '#ffffff5d';
         fieldCelulartxt.innerHTML = "";
         fieldCelularimg.style.display = 'none';
     }
-
-    clickerField = !clickerField;
 }
+
+// Função para fechar o botão "schemas" e resetar seu estado
+function fecharSchemas() {
+    clickerSchemas = false;
+    main.style.background = '#ffffff5d';
+    schemastxt.innerHTML = "";
+    localschemas.style.display = 'none';
+    schemastxtpos.innerHTML = "";
+    solucaoschemas.style.display = 'none';
+}
+
+// Função para fechar o botão "fieldCelular" e resetar seu estado
+function fecharFieldCelular() {
+    clickerField = false;
+    main.style.background = '#ffffff5d';
+    fieldCelulartxt.innerHTML = "";
+    fieldCelularimg.style.display = 'none';
+}
+
+//Erro Di
+
+
 var erroDiButton = document.querySelector('#errodibutton');
 var erroditxt = document.querySelector('#erroditxt');
 var errodiimg = document.querySelector('#errodiimg');
@@ -103,6 +140,9 @@ function abrirErroDi() {
     clickerDi = !clickerDi;
      
 }
+
+
+//
 
 var cfopexbutton = document.querySelector('#cfopexbutton');
 var cfopex = document.querySelector('#cfopex');
@@ -142,6 +182,7 @@ var csosnTabela = document.querySelector('#csosnTabela');
 var csosnObs = document.querySelector('#csosnObs');
 var csoStTabela = document.querySelector('#csoStTabela');
 var clickercsosn = true;
+var csosnTable = document.querySelector('#csosn-table');
 
 csosnButton.addEventListener('click', abrirCsosn);
 
@@ -149,6 +190,7 @@ function abrirCsosn() {
     if (clickercsosn) {
         main.style.background = '#ffffffd0';
         csosnImg.style.display = 'block';
+        csosnTable.style.display = 'block';
         csosnIn.innerHTML += `<ul>
             <li>102 - Tributada pelo Simples Nacional sem permissão de crédito;</li>
             <li>103 - Isenção do ICMS no Simples Nacional para faixa de receita bruta;</li>
@@ -196,6 +238,7 @@ function abrirCsosn() {
         csosnNumerado.innerHTML = "";
         csosnObs.innerHTML = "";
         csoStTabela.innerHTML = "";
+        csosnTable.style.display = 'none';
     }
     clickercsosn = !clickercsosn;
 }
